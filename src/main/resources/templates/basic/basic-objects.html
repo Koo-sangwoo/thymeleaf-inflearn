@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>식 기본 객체 (Expression Basic Objects)</h1>
+<ul>
+    <li>request = <span th:text="${request}"></span></li>
+    <li>response = <span th:text="${response}"></span></li>
+    <li>session = <span th:text="${session}"></span></li>
+    <li>servletContext = <span th:text="${servletContext}"></span></li>
+    <li>locale = <span th:text="${#locale}"></span></li>
+</ul>
+<h1>편의 객체</h1>
+<ul>
+    <li>Request Parameter = <span th:text="${param.paramData}"></span></li> <!-- 요청 바디에 들어온 값을 컨트롤러를 거치지 않고 사용가능 -->
+    <li>session = <span th:text="${session.sessionData}"></span></li> <!-- 세션에 담은 데이터를 꺼내쓸 수 있음 -->
+    <li>spring bean = <span th:text="${@helloBean.hello('Spring!')}"></span></li> <!-- 스프링 Bean의 함수를 호출 -->
+</ul>
+</body>
+</html>
