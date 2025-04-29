@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- 변수에 ~{}를 쓰면 불러오는 조각에 해당 이름을 가진 태그의 값을 가져간다. -->
+<!-- ~{::title}의 경우 변수값에 메인 타이틀 값이 들어가는것  -->
+<!-- ~{::link}의 경우 들어간 리스트만큼 반복해서 찍히게 됨 -->
+<head th:replace="template/layout/base :: common_header(~{::title},~{::link})">
+  <title>메인 타이틀</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <link rel="stylesheet" th:href="@{/themes/smoothness/jquery-ui.css}">
+</head>
+<body>
+메인 컨텐츠
+</body>
+</html>
